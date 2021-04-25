@@ -1,16 +1,1 @@
-local players = game:GetService('Players')
-local white_list = { "Cyber352784", "NuttellaStar", "xCudo", "TheDutchSoul", "xXAbductedbyaliensXx", "iiiX_Blessed", "GhostlyPresence1311", "vSebyy", "NutsCyber3527", "TheSessizER123", "1Lunacy" }
 
-for _,plr in pairs(players:GetPlayers()) do 
-    if table.find(white_list,plr.Name) then 
-        game.StarterGui:SetCore("SendNotification", {Title = "Warn system",Text = "Targeted User Ingame",Icon = "rbxassetid://57254792",Duration = 10})
-    else 
-        game.StarterGui:SetCore("SendNotification", {Title = "Warn system",Text = "User Not Here",Icon = "rbxassetid://57254792",Duration = 10})
-    end 
-end 
-
-players.PlayerAdded:Connect(function(plr)
-    if table.find(white_list,plr.Name) then 
-        game.StarterGui:SetCore("SendNotification", {Title = "Faggot joined",Text = "Be careful and check tab",Icon = "rbxassetid://57254792",Duration = 10})
-    end 
-end)
